@@ -191,3 +191,103 @@ input[type="submit"],
 .btn-report {
   margin: 1rem 0;
 }
+
+.transactions-section {
+  text-align: left;
+
+  .main-info {
+    text-align: left;
+  }
+}
+
+.report-table {
+  margin-bottom: 3rem;
+}
+
+%pagination {
+  background-color: #d9c2ac;
+}
+
+%active-pagination {
+  background-color: inherit;
+  border-color: inherit;
+  color: #fff;
+  outline: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.page-item {
+  @extend %pagination;
+
+  &.active {
+    background-color: #494961;
+    .page-link {
+      @extend %active-pagination;
+    }
+  }
+
+  .page-link {
+    @extend %active-pagination;
+  }
+}
+
+.dropdown-toggle {
+  background-color: #fff;
+  color: #000;
+}
+
+.dropdown-menu {
+  min-width: 5rem;
+  a {
+    color: #000;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .action-items {
+    flex-direction: column;
+  }
+
+  .login-form {
+    width: 100%;
+  }
+
+  header {
+    .links {
+      .link:link,
+      .link:visited {
+        display: block;
+      }
+
+      .link:hover,
+      .link:active {
+        border-bottom: 2px solid transparent;
+      }
+    }
+  }
+
+  .account {
+    flex-direction: column;
+    text-align: left;
+
+    .account-btn {
+      margin: 1rem;
+      padding: 3px 8px;
+    }
+  }
+
+  .edit-account {
+    display: block;
+    float: none;
+  }
+
+  .account-form {
+    .label-value {
+      display: block;
+      margin-left: 0;
+    }
+  }
+}
